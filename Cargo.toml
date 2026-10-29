@@ -1,0 +1,17 @@
+[package]
+name = "yt-dlp-rs"
+version = "0.1.0"
+edition = "2024"
+description = "A small Rust utility that processes a custom JSON format and automates audio downloads through yt-dlp"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[dependencies]
+rustop  = "1.1.4"
+gjson  = "0.8.1"
+
